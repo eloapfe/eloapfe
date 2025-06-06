@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eloá</title>
+    <title>Portfólio Eloá</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1> Portifólio provisório</h1>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Olá, eu sou <span class="destaque">Eloá</span></h1>
+                <h2>Desenvolvedora Web Criativa</h2>
+                <p>Transformando ideias em realidade digital com elegância e eficiência.</p>
+                <a href="#projetos" class="btn">Ver Projetos</a>
+            </div>
+            <div class="hero-image">
+                <div class="avatar-container">
+                    <div class="avatar-frame">
+                     <img src="avatar.png" alt="Foto de Eloá" class="avatar-img">
+                        <div class="avatar-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Olá! Meu nome é Eloá e sou apaixonada por desenvolvimento web e design. Crio soluções digitais que combinam funcionalidade e estética.</p>
+                    <p>Minha abordagem é centrada no usuário, garantindo que cada projeto não apenas pareça bonito, mas também ofereça uma experiência intuitiva e agradável.</p>
+                    <p>Também adoro aprender novas tecnologias e me manter atualizada com as tendências do design e desenvolvimento web.</p>
+                </div>
+                <div class="habilidades">
+                    <h3>Habilidades</h3>
+                    <ul class="skills-list">
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Dart</li>
+                        <li>UI/UX Design</li>
+                        <li>Responsive Design</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <div class="projeto-imagem" style="background-color: #ffcad4;"></div>
+                    <h3>Sistema de VPS - Snoopy</h3>
+                    <p>Projeto de gerenciamento de VPS com interface intuitiva e funcionalidades avançadas.</p>
+                    <div class="projeto-links">
+                        <a href="https://github.com/eloapfe/pbe2-vps01-snoopy-2025" class="btn-small" target="_blank">Código</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-imagem" style="background-color: #f4acb7;"></div>
+                    <h3>Sistema de Biblioteca</h3>
+                    <p>Sistema completo para gerenciamento de bibliotecas com cadastro de livros e usuários.</p>
+                    <div class="projeto-links">
+                        <a href="https://github.com/eloapfe/Biblioteca_full" class="btn-small" target="_blank">Código</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-imagem" style="background-color: #e5989b;"></div>
+                    <h3>Casa Floralles (TCC)</h3>
+                    <p>Projeto desenvolvido em grupo para o TCC - sistema para floricultura com e-commerce.</p>
+                    <div class="projeto-links">
+                        <a href="https://github.com/LailaCM/Casa-Floralles" class="btn-small" target="_blank">Código</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2 class="section-title">Vamos Conversar</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <p>Estou sempre aberta a novas oportunidades e colaborações. Se você tem um projeto em mente ou quer bater um papo, não hesite em me contatar!</p>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/eloapfe" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://www.instagram.com/eloapfe/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:eloapfe@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+                <form class="contato-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Eloá. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Atualiza o ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
